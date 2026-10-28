@@ -142,10 +142,31 @@
       audioGraph.filter.frequency.setTargetAtTime(currentScene === 5 ? 1400 : currentScene === 2 ? 1050 : 600,audioGraph.ctx.currentTime,.7);
     } else if(sound) drone.volume = targetVolume;
   }
+  const videos = $$('.scene-video');
+  const visibleScenes = new Set();
+  function syncVideo() {
+    videos.forEach(video => {
+      const active = motion && !document.hidden && visibleScenes.has(video.closest('.scene, .scroll-scene'));
+      if (!active) { video.pause(); return; }
+      if (!video.getAttribute('src')) {video.src=video.dataset.src;video.load();}
+      video.muted=true;video.play().catch(()=>{});
+    });
+  }
+  videos.forEach(video=>video.addEventListener('playing',()=>video.classList.add('playing')));
+  const sceneObserver = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      entry.target.classList.toggle('in-view',entry.isIntersecting);
+      if(entry.isIntersecting) visibleScenes.add(entry.target);else visibleScenes.delete(entry.target);
+    });
+    syncVideo();
+  },{threshold:0});
+  scenes.forEach(scene=>sceneObserver.observe(scene));
+  document.addEventListener('visibilitychange',syncVideo);
+  addEventListener('pagehide',()=>videos.forEach(video=>video.pause()));
   function setMotion() {
     document.body.classList.toggle('still',!motion);
     $('#motion').textContent = motion ? 'Motion on' : 'Motion off';
-    $('#motion').setAttribute('aria-pressed',String(motion));schedule();
+    $('#motion').setAttribute('aria-pressed',String(motion));syncVideo();schedule();
   }
   $('#motion').addEventListener('click', () => {motion=!motion;setMotion()});
   reduced.addEventListener('change', () => {motion=!reduced.matches;setMotion()});

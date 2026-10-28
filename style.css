@@ -7,3 +7,16 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.shot img,.thought{transform:none!important}*{transition:none!important;animation:none!important}.strike:after{transform:rotate(-7deg)}}
 
 .thought{touch-action:none;cursor:grab;user-select:none;transition:color .25s,opacity .3s,translate .3s}.thought.dragging{cursor:grabbing;transition:none;z-index:5;color:var(--amber)}
+
+/* Local video clips and gently animated stills. */
+.shot .scene-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.1s;filter:saturate(.65) contrast(1.06);pointer-events:none}
+.shot .scene-video.playing{opacity:1}
+.hero .scene-video{object-position:60% center}
+.shot img{animation:camera-drift 20s ease-in-out infinite alternate;animation-play-state:paused;filter:saturate(.7) contrast(1.03)}
+.in-view .shot img{animation-play-state:running}
+.shot:after{content:'';position:absolute;inset:-5%;pointer-events:none;opacity:.055;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23fff' filter='url(%23n)' d='M0 0h180v180H0z'/%3E%3C/svg%3E");animation:grain-drift 1.2s steps(3) infinite;animation-play-state:paused}
+.in-view .shot:after{animation-play-state:running}
+@keyframes camera-drift{from{scale:1.015;translate:-.4% .2%}to{scale:1.075;translate:.5% -.4%}}
+@keyframes grain-drift{0%,100%{transform:translate(0,0)}33%{transform:translate(-1%,1%)}66%{transform:translate(1%,-1%)}}
+.still .shot img,.still .shot:after{animation:none!important;scale:1;translate:0 0}
+@media(prefers-reduced-motion:reduce){.shot img,.shot:after{animation:none!important;scale:1;translate:0 0}}

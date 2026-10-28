@@ -19,10 +19,10 @@
 <div class="film-progress" aria-hidden="true"><span id="progress"></span></div>
 <main>
   <section id="start" class="scene hero" data-title="EMPLOYED" data-sound="0.16">
-    <div class="shot"><img src="cafe-before-dawn.webp" width="1672" height="941" alt="Fictional film still: a worker wipes a café counter before dawn." fetchpriority="high"></div>
+    <div class="shot"><img src="cafe-before-dawn.webp" width="1672" height="941" alt="Fictional film still: a worker wipes a café counter before dawn." fetchpriority="high"><video class="scene-video" data-src="cafe-loop.mp4" muted loop playsinline preload="none" aria-label="Stock footage of baristas working."></video></div>
     <div class="shade"></div>
     <div class="scene-copy"><p class="eyebrow">AN INTERACTIVE SHORT STORY</p><h1>They have<br>a <em>job.</em></h1><div class="entry"><button id="begin-sound" class="primary" type="button">Enter with sound</button><a href="#without-home" class="quiet-link">Continue silently</a></div><p class="micro">Headphones recommended. Scroll at your own pace.</p></div>
-    <div class="scene-footer"><span>A FICTIONAL PERSON. A REAL CONTRADICTION.</span><a href="#credits">About the story &amp; sources</a></div>
+    <div class="scene-footer"><span>A FICTIONAL STORY. A REAL CONTRADICTION.</span><a href="#credits">About the story &amp; sources</a></div>
   </section>
 
   <section id="without-home" class="scene reveal" data-title="WITHOUT A HOME" data-sound="0.10">
@@ -44,13 +44,13 @@
   </section>
 
   <section id="commute" class="scene commute" data-title="KEEP GOING" data-sound="0.18">
-    <div class="shot"><img src="train-at-dusk.webp" width="1672" height="941" alt="Fictional film still: a commuter sits in a train as the city passes outside." loading="lazy"></div><div class="shade"></div>
+    <div class="shot"><img src="train-at-dusk.webp" width="1672" height="941" alt="Fictional film still: a commuter sits in a train as the city passes outside." loading="lazy"><video class="scene-video" data-src="train-loop.mp4" muted loop playsinline preload="none" aria-label="Stock footage of city reflections through a train window."></video></div><div class="shade"></div>
     <div class="scene-copy"><p class="eyebrow">THE NEXT DAY</p><h2>Get up.<br>Go in.<br><em>Keep going.</em></h2></div>
     <div class="scene-footer"><span>THE ROUTINE CONTINUES.</span><span>04 / 08</span></div>
   </section>
 
   <section id="work" class="scroll-scene work" data-title="A FULL WEEK" data-sound="0.23">
-    <div class="sticky-stage"><div class="shot"><img src="cafe-before-dawn.webp" width="1672" height="941" alt="Fictional film still of working hands, behind the wage calculation." loading="lazy"></div><div class="shade"></div>
+    <div class="sticky-stage"><div class="shot"><img src="cafe-before-dawn.webp" width="1672" height="941" alt="Fictional film still of working hands, behind the wage calculation." loading="lazy"><video class="scene-video" data-src="cafe-loop.mp4" muted loop playsinline preload="none" aria-label="Stock footage of baristas working."></video></div><div class="shade"></div>
       <div class="work-content"><p class="eyebrow">NATIONAL MINIMUM-WAGE BENCHMARK · JULY 2026</p><h2>A full <em>week.</em></h2>
         <div class="earnings"><div><output id="hours-output" for="hours">0</output><span>HOURS</span></div><div><output id="wage-output" for="hours">$0</output><span>GROSS PAY · BEFORE TAX</span></div></div>
         <label class="scrub-label" for="hours">Scroll to work the week. Or drag time.</label><input id="hours" type="range" min="0" max="38" step="0.5" value="0" aria-describedby="wage-note"><div class="range-ends" aria-hidden="true"><span>0 HRS</span><span>38 HRS</span></div>
@@ -69,7 +69,7 @@
   </section>
 
   <section id="evidence" class="scene evidence" data-title="NOT AN EXCEPTION" data-sound="0.08">
-    <div class="shot"><img src="train-at-dusk.webp" width="1672" height="941" alt="Fictional commuter seen from behind, carrying the story into the evidence." loading="lazy"></div><div class="shade"></div>
+    <div class="shot"><img src="train-at-dusk.webp" width="1672" height="941" alt="Fictional commuter seen from behind, carrying the story into the evidence." loading="lazy"><video class="scene-video" data-src="train-loop.mp4" muted loop playsinline preload="none" aria-label="Stock footage of city reflections through a train window."></video></div><div class="shade"></div>
     <div class="scene-copy"><p class="eyebrow">AUSTRALIA · 2023–24</p><h2 class="big-number">10,000</h2><p class="short">Working.<br>Experiencing homelessness.</p><p class="evidence-scope">Around 10,000 adult homelessness-service clients were employed and homeless when support began.</p><a class="source-mark" href="#source-aihw">[1] AIHW · service clients, not the whole population</a></div>
   </section>
 
@@ -88,8 +88,9 @@
       <article id="source-housing"><h4>[3] Housing affordability</h4><p>Anglicare Australia (2026), <cite>Rental Affordability Snapshot: National Report</cite>, seventeenth edition, pp. 7–10. Surveyed 48,776 advertised listings on 14–15 March 2026. For a single minimum-wage earner, 255 were affordable and suitable: 0.5%, rounded.</p><p>The study uses a 30% income affordability benchmark, appropriate household size and eligible benefits. Our 200-mark visual shows the rounded percentage, not an application success rate. This March study predates the July 2026 wage benchmark above; we do not recalculate the study using the later wage.</p><a href="https://www.anglicare.asn.au/wp-content/uploads/2026/04/Rental-Affordability-Snapshot-2026-National-Report.pdf" target="_blank" rel="noreferrer">Read the national report</a> · <a href="https://www.anglicare.asn.au/heat-maps" target="_blank" rel="noreferrer">Explore your region</a></article>
       <p class="micro">Sources checked 6 October 2026. This is a dated educational narrative, not financial or employment advice.</p>
     </div><div>
-      <h3>Images &amp; sound</h3>
-      <article><h4>Illustrative film stills</h4><p>Created for this project with OpenAI image generation. Café before dawn, commuter at dusk, and apartment windows: 6 October 2026. Street encounter: 22 September 2026. All are fictional scenes, not documentary photographs or evidence about the people pictured.</p><ul class="asset-list"><li><a href="cafe-before-dawn.webp">Café / working hands</a></li><li><a href="street.webp">Street / seated person</a></li><li><a href="train-at-dusk.webp">Train / commute</a></li><li><a href="windows-at-night.webp">Apartments / windows</a></li></ul></article>
+      <h3>Images, film &amp; sound</h3>
+<article><h4>Real stock footage</h4><p>Cafe: <cite>Baristas Working In A Coffee Shop</cite> by cottonbro studio, Pexels (4 July 2020), 22 seconds. Train: <cite>Cityscape Reflections on Subway Window</cite> by Zehra K., Pexels (10 February 2025), 6 seconds. Clips are muted, looped and colour-graded. They illustrate work and travel; people shown are not represented as experiencing homelessness, endorsing this story, or being the fictional character. Locations are illustrative, not evidence of an Australian location.</p><a href="https://www.pexels.com/video/baristas-working-in-a-coffee-shop-4795016/" target="_blank" rel="noreferrer">Cafe footage &amp; creator</a> · <a href="https://www.pexels.com/video/cityscape-reflections-on-subway-window-30669734/" target="_blank" rel="noreferrer">Train footage &amp; creator</a> · <a href="https://www.pexels.com/license/" target="_blank" rel="noreferrer">Pexels License</a></article>
+      <article><h4>Illustrative film stills</h4><p>Created for this project with OpenAI image generation. Café before dawn, commuter at dusk, and apartment windows: 6 October 2026. Street encounter: 22 September 2026. Generated images remain in the street and housing scenes and as video fallbacks. Slow camera drift and a film texture add movement; these remain illustrations, not documentary photographs.</p><ul class="asset-list"><li><a href="cafe-before-dawn.webp">Café / working hands</a></li><li><a href="street.webp">Street / seated person</a></li><li><a href="train-at-dusk.webp">Train / commute</a></li><li><a href="windows-at-night.webp">Apartments / windows</a></li></ul></article>
       <article><h4>Low Pitched Drone Scary</h4><p>jhooper (Freesound), distributed by freesound_community on Pixabay; published 2 June 2022. Used as a quiet, looping atmosphere with scene-dependent volume and filtering. The ending intentionally falls silent.</p><a href="https://pixabay.com/sound-effects/horror-low-pitched-drone-scary-34446/" target="_blank" rel="noreferrer">Original audio &amp; creator</a> · <a href="https://pixabay.com/service/license-summary/" target="_blank" rel="noreferrer">Pixabay Content License</a></article>
       <article><h4>Spoken judgements</h4><p>The written phrases are constructed dialogue, not interview quotations. Recorded dialogue is not included in this version. The soundtrack uses the credited Pixabay recording only.</p></article>
       <h3>The code</h3><p>Plain HTML, CSS and JavaScript. No frameworks, remote fonts, libraries, trackers or external APIs. Images and sound are stored with the site.</p><div class="code-links"><a href="index.html" download="index.html">HTML</a><a href="style.css" download="style.css">CSS</a><a href="script.js" download="script.js">JavaScript</a></div>
