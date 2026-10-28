@@ -20,3 +20,9 @@
 @keyframes grain-drift{0%,100%{transform:translate(0,0)}33%{transform:translate(-1%,1%)}66%{transform:translate(1%,-1%)}}
 .still .shot img,.still .shot:after{animation:none!important;scale:1;translate:0 0}
 @media(prefers-reduced-motion:reduce){.shot img,.shot:after{animation:none!important;scale:1;translate:0 0}}
+
+/* Match the opening stock footage to the street scenes' blue-hour palette. */
+.hero .scene-video{object-position:64% center;filter:saturate(.28) brightness(.72) contrast(1.08);transform:scale(1.065)}
+.hero .shade{background:linear-gradient(90deg,rgba(3,15,24,.91) 0%,rgba(5,19,29,.62) 46%,rgba(5,19,29,.25) 100%),linear-gradient(0deg,rgba(3,12,20,.7),transparent 55%,rgba(5,17,26,.28));}
+.hero .shot:before{content:'';position:absolute;inset:0;z-index:1;background:#14394c;mix-blend-mode:color;opacity:.24;pointer-events:none}
+@media(max-width:700px){.hero .scene-video{object-position:58% center}.hero .shade{background:linear-gradient(90deg,rgba(3,15,24,.83),rgba(5,19,29,.38)),linear-gradient(0deg,rgba(3,12,20,.8),transparent 70%)}}
